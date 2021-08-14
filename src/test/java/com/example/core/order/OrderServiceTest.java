@@ -1,5 +1,6 @@
 package com.example.core.order;
 
+import com.example.core.AppConfig;
 import com.example.core.member.Grade;
 import com.example.core.member.Member;
 import com.example.core.member.MemberService;
@@ -12,8 +13,11 @@ import org.junit.jupiter.api.Test;
 
 public class OrderServiceTest {
 
-    MemberService memberService = new MemberServiceImpl();
-    OrderService orderService = new OrderServiceImpl();
+
+    AppConfig appConfig = new AppConfig();
+
+    MemberService memberService = appConfig.memberService();
+    OrderService orderService = appConfig.orderService();
 
     @Test
     void createOrder(){
