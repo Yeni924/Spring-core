@@ -9,22 +9,30 @@ import discount.FixDiscountPolicy;
 import discount.RateDiscountPolicy;
 import order.OrderService;
 import order.OrderServiceImpl;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+
+@Configuration //설정정보
 public class AppConfig {
 
+    @Bean //스프링 컨테이너에 등록
     public MemberService memberService(){ //멤버 서비스
         return new MemberServiceImpl(memberRepository());
     }
 
-    private MemberRepository memberRepository() { // 나중에 DB로 바꿀 경우 여기 코드만 바뀌면된다.
+    @Bean
+    public MemberRepository memberRepository() { // 나중에 DB로 바꿀 경우 여기 코드만 바뀌면된다.
         return new MemoryMemberRepository();
     }
 
+    @Bean
     public OrderService orderService(){ //주문서비스
         //OrderServiceImpl안에 MemberMeberRespository와 FixDiscountPolicy가 넘어감
         return new OrderServiceImpl(memberRepository(),disCountPolicy());
     }
 
+    @Bean
     public DisCountPolicy disCountPolicy(){
         //return new FixDiscountPolicy();
         return new RateDiscountPolicy();

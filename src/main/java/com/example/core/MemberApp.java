@@ -4,13 +4,19 @@ import com.example.core.member.Grade;
 import com.example.core.member.Member;
 import com.example.core.member.MemberService;
 import com.example.core.member.MemberServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class MemberApp {
     public static void main(String[] args) {
+//
+//        AppConfig appConfig = new AppConfig();
+//
+//        MemberService memberService = appConfig.memberService();
 
-        AppConfig appConfig = new AppConfig();
-
-        MemberService memberService = appConfig.memberService();
+        //객체들 관리해주는 컨테이너, AppConfig에 있는 Bean들을 스프링 컨테이너에 집어넣어서 관리해줌
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+        MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
 
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
