@@ -18,8 +18,6 @@ https://kwonyeeun.tistory.com/m/category/Study%20Note/Spring%20%20%EC%99%84%EC%A
 
 3. 스프링 핵심 원리 이해2 - 객체 지향 원리 적용
  - https://kwonyeeun.tistory.com/71?category=1040556
- -인터페이스에만 의존하도록 의존 관계를 변경
- 
  
    1) SRP 단일 책임 원칙 
      : 한 클래스는 하나의 책임만 가져야 한다.
