@@ -64,8 +64,11 @@ https://kwonyeeun.tistory.com/m/category/Study%20Note/Spring%20%20%EC%99%84%EC%A
 # 5. 싱글톤 컨테이너
   - https://kwonyeeun.tistory.com/82?category=1040556
 
-   싱글톤 패턴 : 객체가 1개가 생성되고, 공유
-   싱글톤 패턴의 문제점
-   싱글톤 방식의 주의점 :  싱글톤 객체는 상태를 유지(stateful)하게 설계하면 안됌,무상태(stateless)로 설계해야 한다.
-   @Configuration과 싱글톤 : Configuration을 사용 CGLIB로 싱글톤을 보장한다.
+   ## 싱글톤 패턴 
+   - 객체가 1개가 생성되고, 공유
+   ## 싱글톤 패턴의 문제점
+   ## 싱글톤 방식의 주의점 
+   - 싱글톤 객체는 상태를 유지(stateful)하게 설계하면 안됌,무상태(stateless)로 설계해야 한다.
+   ## @Configuration과 싱글톤 
+   - Configuration을 사용 CGLIB로 싱글톤을 보장한다.
    
