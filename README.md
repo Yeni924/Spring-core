@@ -72,3 +72,9 @@ https://kwonyeeun.tistory.com/m/category/Study%20Note/Spring%20%20%EC%99%84%EC%A
    ## @Configuration과 싱글톤 
    - Configuration을 사용 CGLIB로 싱글톤을 보장한다.
    
+   
+---
+# 6. 컴포넌트 스캔
+   - https://kwonyeeun.tistory.com/83?category=1040556
+
+   ##@Component
