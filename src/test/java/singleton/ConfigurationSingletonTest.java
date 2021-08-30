@@ -22,7 +22,7 @@ public class ConfigurationSingletonTest {
         OrderServiceImpl orderService = ac.getBean("orderService", OrderServiceImpl.class);
         MemberRepository memberRepository = ac.getBean("memberRepository", MemberRepository.class);
 
-        MemberRepository memberRepository1 = memberService.getMemberRepository();
+       // MemberRepository memberRepository1 = memberService.getMemberRepository();
         MemberRepository memberRepository2 = orderService.getMemberRepository();
 
         //세번의 new를 하는데 왜 같은가?

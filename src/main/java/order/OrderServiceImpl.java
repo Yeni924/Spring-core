@@ -6,20 +6,18 @@ import com.example.core.member.MemoryMemberRepository;
 import discount.DisCountPolicy;
 import discount.FixDiscountPolicy;
 import discount.RateDiscountPolicy;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService{
 
-
-    //private final MemberRepository memberRepository = new MemoryMemberRepository();
-
-    // private final DisCountPolicy disCountPolicy = new FixDiscountPolicy();
-    //새로운 정책한 코드를 실행하려면 RateDiscountPolicy로 수정해야한다.
-    // private final DisCountPolicy disCountPolicy = new RateDiscountPolicy();
 
     private final MemberRepository memberRepository;
     private final DisCountPolicy disCountPolicy; //인터페이스만 의존하도록 수정해야한다.
 
 
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DisCountPolicy disCountPolicy) {
         this.memberRepository = memberRepository;
         this.disCountPolicy = disCountPolicy;
