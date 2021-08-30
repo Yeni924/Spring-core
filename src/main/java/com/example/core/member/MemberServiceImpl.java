@@ -1,5 +1,8 @@
 package com.example.core.member;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemberServiceImpl implements MemberService{
 
   //  private final MemberRepository memberRepository = new MemoryMemberRepository(); //실제 할당하는 부분이 구체화에 의존함, DIP 위반
@@ -23,7 +26,7 @@ public class MemberServiceImpl implements MemberService{
 
 
     //test용도
-    public MemberRepository getMemberRepository(){
-        return memberRepository;
-    }
+//    public MemberRepository getMemberRepository(){
+//        return memberRepository;
+//    }
 }
