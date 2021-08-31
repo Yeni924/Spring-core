@@ -75,6 +75,12 @@ https://kwonyeeun.tistory.com/m/category/Study%20Note/Spring%20%20%EC%99%84%EC%A
    
 ---
 # 6. 컴포넌트 스캔
-   - https://kwonyeeun.tistory.com/83?category=1040556
-
-   ##@Component
+   - https://kwonyeeun.tistory.com/83
+   
+   분기 : #2 from ktech960924/ComponentScanRe
+   
+  ## 컴포넌트 스캔과 의존관계 자동 주입
+  ## 탐색 위치와 기본 스캔 대상
+  ## 필터
+  ## 중복 등록과 충돌
+   
