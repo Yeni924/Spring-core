@@ -9,12 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class MemberApp {
     public static void main(String[] args) {
-//
-//        AppConfig appConfig = new AppConfig();
-//
-//        MemberService memberService = appConfig.memberService();
 
-        //객체들 관리해주는 컨테이너, AppConfig에 있는 Bean들을 스프링 컨테이너에 집어넣어서 관리해줌
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
         MemberService memberService = applicationContext.getBean("memberService", MemberService.class);
 

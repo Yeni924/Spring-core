@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MemoryMemberRepository implements MemberRepository{
 
-    private  static Map<Long,Member> store = new HashMap<>(); //동시성 이슈가 발생할 수 있음
+    private  static Map<Long,Member> store = new HashMap<>();
 
     @Override
     public void save(Member member) {
