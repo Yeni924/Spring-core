@@ -4,11 +4,10 @@ import com.example.core.member.MemberRepository;
 import com.example.core.member.MemberService;
 import com.example.core.member.MemberServiceImpl;
 import com.example.core.member.MemoryMemberRepository;
-import discount.DisCountPolicy;
-import discount.FixDiscountPolicy;
-import discount.RateDiscountPolicy;
-import order.OrderService;
-import order.OrderServiceImpl;
+import com.example.core.discoount.DisCountPolicy;
+import com.example.core.discoount.RateDiscountPolicy;
+import com.example.core.order.OrderService;
+import com.example.core.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

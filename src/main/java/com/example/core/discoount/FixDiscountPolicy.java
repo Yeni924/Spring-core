@@ -1,19 +1,16 @@
-package discount;
+package com.example.core.discoount;
 
 import com.example.core.member.Grade;
 import com.example.core.member.Member;
 
-import org.springframework.stereotype.Component;
+public class FixDiscountPolicy  implements DisCountPolicy{
 
-@Component
-public class RateDiscountPolicy implements DisCountPolicy{
-
-   private  int discountPercent = 10;
+    private  int discountFixAmount = 1000;
 
     @Override
     public int discount(Member member, int price) {
         if(member.getGrade() == Grade.VIP){
-            return price * discountPercent/100;
+            return discountFixAmount;
         }else{
             return 0;
         }

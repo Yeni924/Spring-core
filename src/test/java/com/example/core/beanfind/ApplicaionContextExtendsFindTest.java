@@ -1,11 +1,10 @@
 package com.example.core.beanfind;
 
-import discount.DisCountPolicy;
-import discount.FixDiscountPolicy;
-import discount.RateDiscountPolicy;
+import com.example.core.discoount.DisCountPolicy;
+import com.example.core.discoount.FixDiscountPolicy;
+import com.example.core.discoount.RateDiscountPolicy;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

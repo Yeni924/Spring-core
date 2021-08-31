@@ -1,8 +1,8 @@
 package com.example.core;
 
 import com.example.core.member.*;
-import order.Order;
-import order.OrderService;
+import com.example.core.order.Order;
+import com.example.core.order.OrderService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

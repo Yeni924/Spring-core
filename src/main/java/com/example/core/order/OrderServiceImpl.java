@@ -1,8 +1,8 @@
-package order;
+package com.example.core.order;
 
 import com.example.core.member.Member;
 import com.example.core.member.MemberRepository;
-import discount.DisCountPolicy;
+import com.example.core.discoount.DisCountPolicy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

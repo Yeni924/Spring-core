@@ -3,7 +3,7 @@ package singleton;
 import com.example.core.AppConfig;
 import com.example.core.member.MemberRepository;
 import com.example.core.member.MemberServiceImpl;
-import order.OrderServiceImpl;
+import com.example.core.order.OrderServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
