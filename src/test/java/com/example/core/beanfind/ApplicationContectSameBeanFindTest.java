@@ -1,8 +1,6 @@
 package com.example.core.beanfind;
 
-import com.example.core.AppConfig;
 import com.example.core.member.MemberRepository;
-import com.example.core.member.MemberService;
 import com.example.core.member.MemoryMemberRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -25,7 +23,6 @@ public class ApplicationContectSameBeanFindTest {
     @Test
     @DisplayName("타입으로 조회시 같은 타입이 둘 이상 있으면, 중복 오류가 발생한다.")
     void findBeanByTypeDuplicate(){
-    //    MemberRepository bean = ac.getBean(MemberRepository.class);
         assertThrows(NoSuchBeanDefinitionException.class,
                 () -> ac.getBean("xxxx", MemberRepository.class));
     }

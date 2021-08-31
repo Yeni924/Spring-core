@@ -1,4 +1,4 @@
-package order;
+package com.example.core.order;
 
 public interface OrderService {
 

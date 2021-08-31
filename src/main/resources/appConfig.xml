@@ -10,12 +10,12 @@
     <bean id="memberRepository" class="com.example.core.member.MemoryMemberRepository">
     </bean>
 
-    <bean id="orderService" class="order.OrderServiceImpl">
+    <bean id="orderService" class="com.example.core.order.OrderServiceImpl">
         <constructor-arg name="memberRepository" ref="memberRepository"></constructor-arg>
         <constructor-arg name="disCountPolicy" ref="discountPolicy"></constructor-arg>
     </bean>
 
-    <bean id="discountPolicy" class="discount.RateDiscountPolicy">
+    <bean id="discountPolicy" class=" com.example.core.discoount.RateDiscountPolicy">
     </bean>
 
 

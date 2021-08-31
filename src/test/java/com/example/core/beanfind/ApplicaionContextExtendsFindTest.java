@@ -1,11 +1,10 @@
 package com.example.core.beanfind;
 
-import discount.DisCountPolicy;
-import discount.FixDiscountPolicy;
-import discount.RateDiscountPolicy;
+import com.example.core.discoount.DisCountPolicy;
+import com.example.core.discoount.FixDiscountPolicy;
+import com.example.core.discoount.RateDiscountPolicy;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.NoUniqueBeanDefinitionException;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,12 +18,12 @@ public class ApplicaionContextExtendsFindTest {
 
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(TestConfig.class);
 
-     @Test
-     @DisplayName("부모 타입으로 조회 시, 자식이 둘 이상 있으면, 중복 오류가 발생한다.")
-         void findBeanByParentTypeDuplicate(){
-            ac.getBean(DisCountPolicy.class); //RateDiscountPolicy와 FixDiscountPolicy 자식 둘다 출력
-           // assertThrows(NoUniqueBeanDefinitionException.class,()->ac.getBean(DisCountPolicy.class));
-        }
+//     @Test
+//     @DisplayName("부모 타입으로 조회 시, 자식이 둘 이상 있으면, 중복 오류가 발생한다.")
+//         void findBeanByParentTypeDuplicate(){
+//         DisCountPolicy disCountPolicy = ac.getBean(DisCountPolicy.class);
+//         assertThat(disCountPolicy).isNotInstanceOf(DisCountPolicy.class);
+//        }
 
     @Test
     @DisplayName("자식이 둘 이상 있으면 빈 이름을 지정하면 된다.")

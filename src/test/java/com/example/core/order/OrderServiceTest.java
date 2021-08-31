@@ -4,10 +4,6 @@ import com.example.core.AppConfig;
 import com.example.core.member.Grade;
 import com.example.core.member.Member;
 import com.example.core.member.MemberService;
-import com.example.core.member.MemberServiceImpl;
-import order.Order;
-import order.OrderService;
-import order.OrderServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 

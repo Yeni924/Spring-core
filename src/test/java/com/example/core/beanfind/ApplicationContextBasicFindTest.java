@@ -34,14 +34,13 @@ class ApplicationContextBasicFindTest {
     @Test
     @DisplayName("구체 타입으로 조회")
     void findBeanByName2(){
-        MemberService memberService=ac.getBean("memberService", MemberServiceImpl.class); //좋은 코드는 아님
+        MemberService memberService=ac.getBean("memberService", MemberServiceImpl.class);
         assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
     }
 
     @Test
     @DisplayName("빈 이름으로 조회X")
     void findBeanByNameX(){
-      //  MemberService xxxx = ac.getBean("xxxx", MemberService.class);
         org.junit.jupiter.api.Assertions.assertThrows(NoSuchBeanDefinitionException.class,
                 () -> ac.getBean("xxxx", MemberService.class));
     }
