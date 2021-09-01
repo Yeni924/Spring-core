@@ -1,4 +1,4 @@
-package xml;
+package com.example.core.xml;
 
 import com.example.core.member.MemberService;
 import org.junit.jupiter.api.Test;

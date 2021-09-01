@@ -1,4 +1,4 @@
-package singleton;
+package com.example.core.singleton;
 
 public class SingletonService {
 

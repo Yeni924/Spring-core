@@ -1,4 +1,4 @@
-package bendefinition;
+package com.example.core.bendefinition;
 
 import com.example.core.AppConfig;
 import org.junit.jupiter.api.DisplayName;

@@ -1,24 +1,27 @@
 package com.example.core.order;
 
+import com.example.core.annotation.MainDiscountPolicy;
 import com.example.core.member.Member;
 import com.example.core.member.MemberRepository;
 import com.example.core.discoount.DisCountPolicy;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 
 @Component
 public class OrderServiceImpl implements OrderService{
-    private final MemberRepository memberRepository;
-    private final DisCountPolicy disCountPolicy;
+
+    private  final MemberRepository memberRepository;
+    private  final DisCountPolicy disCountPolicy;
 
 
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DisCountPolicy disCountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DisCountPolicy disCountPolicy) {
         this.memberRepository = memberRepository;
         this.disCountPolicy = disCountPolicy;
     }
-
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {

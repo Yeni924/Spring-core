@@ -1,4 +1,4 @@
-package scan.filter;
+package com.example.core.scan.filter;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.springframework.context.annotation.ComponentScan.*;
+import static org.springframework.context.annotation.ComponentScan.Filter;
 
 public class ComponentFilterAppConfigTest {
 
