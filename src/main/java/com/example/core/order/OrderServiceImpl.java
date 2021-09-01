@@ -17,7 +17,7 @@ public class OrderServiceImpl implements OrderService{
 
 
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, @Qualifier("mainDiscountPolicy") DisCountPolicy disCountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository,  DisCountPolicy disCountPolicy) {
         this.memberRepository = memberRepository;
         this.disCountPolicy = disCountPolicy;
     }
