@@ -10,17 +10,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrderServiceImpl implements OrderService{
 
-    private final MemberRepository memberRepository;
-    private final DisCountPolicy disCountPolicy;
+    private  MemberRepository memberRepository;
+    private  DisCountPolicy disCountPolicy;
 
-
-  //  @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DisCountPolicy disCountPolicy) {
-        System.out.println("memberRepository = " + memberRepository);
-        System.out.println("disCountPolicy = " + disCountPolicy);
-        this.memberRepository = memberRepository;
+    @Autowired(required = false)
+    public void setDisCountPolicy(DisCountPolicy disCountPolicy) {
         this.disCountPolicy = disCountPolicy;
     }
+
+    @Autowired
+    public void setMemberRepository(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
+
 
 
 
