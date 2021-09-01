@@ -10,16 +10,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class OrderServiceImpl implements OrderService{
 
-    private  MemberRepository memberRepository;
-    private  DisCountPolicy disCountPolicy;
+    private  final MemberRepository memberRepository;
+    private  final DisCountPolicy disCountPolicy;
 
 
     @Autowired
-    public void init(MemberRepository memberRepository, DisCountPolicy disCountPolicy){
-        this.memberRepository= memberRepository;
-        this.disCountPolicy=disCountPolicy;
+    public OrderServiceImpl(MemberRepository memberRepository, DisCountPolicy disCountPolicy) {
+        this.memberRepository = memberRepository;
+        this.disCountPolicy = disCountPolicy;
     }
-
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
