@@ -27,12 +27,12 @@ public class AppConfig {
         return new MemoryMemberRepository();
     }
 
-    @Bean
-    public OrderService orderService(){
-        System.out.println("call AppConfig.orderService");
-
-        return new OrderServiceImpl(memberRepository(),disCountPolicy());
-    }
+//    @Bean
+//    public OrderService orderService(){
+//        System.out.println("call AppConfig.orderService");
+//
+//        return new OrderServiceImpl(memberRepository(),disCountPolicy());
+//    }
 
     @Bean
     public DisCountPolicy disCountPolicy(){
