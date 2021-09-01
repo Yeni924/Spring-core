@@ -1,4 +1,4 @@
-package discount;
+package com.example.core.discount;
 
 import com.example.core.discoount.RateDiscountPolicy;
 import com.example.core.member.Grade;

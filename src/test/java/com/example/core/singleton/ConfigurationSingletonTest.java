@@ -1,4 +1,4 @@
-package singleton;
+package com.example.core.singleton;
 
 import com.example.core.AppConfig;
 import com.example.core.member.MemberRepository;

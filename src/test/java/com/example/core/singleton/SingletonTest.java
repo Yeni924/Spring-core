@@ -1,8 +1,7 @@
-package singleton;
+package com.example.core.singleton;
 
 import com.example.core.AppConfig;
 import com.example.core.member.MemberService;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;

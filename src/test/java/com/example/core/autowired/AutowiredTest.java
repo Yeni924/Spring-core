@@ -1,4 +1,4 @@
-package autowired;
+package com.example.core.autowired;
 
 import com.example.core.member.Member;
 import org.junit.jupiter.api.DisplayName;
