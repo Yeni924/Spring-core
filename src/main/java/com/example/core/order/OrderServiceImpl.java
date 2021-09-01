@@ -9,11 +9,17 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService{
 
     private  final MemberRepository memberRepository;
     private  final DisCountPolicy disCountPolicy;
+
+
+    @Autowired
+    public OrderServiceImpl(MemberRepository memberRepository, DisCountPolicy rateDiscountPolicy) {
+        this.memberRepository = memberRepository;
+        this.disCountPolicy = rateDiscountPolicy;
+    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
