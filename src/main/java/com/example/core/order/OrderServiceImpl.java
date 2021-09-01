@@ -3,22 +3,17 @@ package com.example.core.order;
 import com.example.core.member.Member;
 import com.example.core.member.MemberRepository;
 import com.example.core.discoount.DisCountPolicy;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 
 @Component
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService{
 
     private  final MemberRepository memberRepository;
     private  final DisCountPolicy disCountPolicy;
-
-
-    @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DisCountPolicy disCountPolicy) {
-        this.memberRepository = memberRepository;
-        this.disCountPolicy = disCountPolicy;
-    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
