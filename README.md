@@ -83,4 +83,25 @@ https://kwonyeeun.tistory.com/m/category/Study%20Note/Spring%20%20%EC%99%84%EC%A
   #### 탐색 위치와 기본 스캔 대상
   #### 필터
   #### 중복 등록과 충돌
+  
+  
+  
+  ---
+  # 7. 의존관계 자동 주입
+   - https://kwonyeeun.tistory.com/87
+   
+  #### 다양한 의존 관계 주입방법
+   - 생성자 주입을 선택 .  의존관계 주입은 한번 일어나면 애플리케이션 종료 시점까지 의존 관계를 변경할 일이 없다. 생성자 주입으로 불변하게 설계하자
+
+  #### 옵션 처리
+   - Autowired(required=false) : 메서드 자체가 호출 안된다.
+   - @Nullable : 자동 주입할 대상이 없으면 null 출력
+   - Optional<> : 자동 주입할 대상이 없으면 Optional.empty 출력
+
+
+  #### 조회 빈이 2개 이상 일떄?
+   - @Primary : 우선순위를 정하는 방법
+   - @Qualifier :  추가 구분자를 붙여주는 방법
+   - 메인 데이터베이스 @Primary로, 서브 데잍터베이스는 @Qulifier를 지정해서 명시적으로 획득하는 방식으로 하면 코드가 깔끔하게 유지 된다.
+
    
