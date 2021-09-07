@@ -16,7 +16,7 @@ public class LogDemoController {
 
     private final LogDemoService logDemoService;
 
-    private final ObjectProvider<MyLogger> myLoggerProvider;
+    private final MyLogger myLogger;
 
     @RequestMapping("log-demo")
     @ResponseBody
@@ -24,7 +24,6 @@ public class LogDemoController {
 
 
         String reuquestURL = request.getRequestURI().toString();
-        MyLogger myLogger = myLoggerProvider.getObject();
         myLogger.setRequestURL(reuquestURL);
 
         myLogger.log("controller test");
