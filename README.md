@@ -110,9 +110,11 @@ https://kwonyeeun.tistory.com/m/category/Study%20Note/Spring%20%20%EC%99%84%EC%A
   #### 빈 생명주기 콜백 시작
    
    - 빈 생명주기 
-   '''
+   
+   ```
    스프링 컨테이너 생성-> 스프링빈 생성-> 의존 관계 주입->초기화 콜백-> 사용-> 소멸 전 콜백 -> 스프링 종료
-   '''
+   ```
+   
 
   #### 인터페이스 InitializingBean, DisposableBean
   - InitializingBean, DisposableBean을 상속 받으면 빈의 초기화 시점과, 소멸 시점을 알 수 있다.
