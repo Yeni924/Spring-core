@@ -104,4 +104,26 @@ https://kwonyeeun.tistory.com/m/category/Study%20Note/Spring%20%20%EC%99%84%EC%A
    - @Qualifier :  추가 구분자를 붙여주는 방법
    - 메인 데이터베이스 @Primary로, 서브 데잍터베이스는 @Qulifier를 지정해서 명시적으로 획득하는 방식으로 하면 코드가 깔끔하게 유지 된다.
 
+
+ ---
+  # 8. 빈 생명주기 콜백
+  #### 빈 생명주기 콜백 시작
+   
+   - 빈 생명주기 
+   '''
+   스프링 컨테이너 생성-> 스프링빈 생성-> 의존 관계 주입->초기화 콜백-> 사용-> 소멸 전 콜백 -> 스프링 종료
+   '''
+
+  #### 인터페이스 InitializingBean, DisposableBean
+  - InitializingBean, DisposableBean을 상속 받으면 빈의 초기화 시점과, 소멸 시점을 알 수 있다.
+  - InitializingBean - afterPropertiesSet : 빈 생성 후 의존 주입 후 실행된다.
+  - DisposableBean - destory() : 소멸
+
+  #### 빈 등록 초기화, 소멸 메서드
+  - 설정 정보를 사용 해 코드를 고칠 수 없는 외부 라이브러리에도 초기화, 종료 메서드를 적용할 수 있다.
+ 
+  #### @PostContruct, @PreDestory
+  - 최신 스프링에서 권장하는 방법
+  - 단점은 외부 라이브러리에는 적용 못한다.
+  - 외부 라이브러리는 @Bean의 기능을 사용하면 된다.
    
